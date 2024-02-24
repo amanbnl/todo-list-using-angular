@@ -1,0 +1,10 @@
+<div class="todo-wrapper">
+  <h1>Add your Tasks</h1>
+  <app-add-update-todo-form [currentTodo]="currentTodoItem"
+    (updateTodoItem)="updateTodoItem($event)"></app-add-update-todo-form>
+  <ng-container *ngFor="let todoItem of todoList">
+    <app-todo-item [todoItem]="todoItem" (markItemAsCompleted)="markItemAsCompleted($event)"
+      (makeTodoEditable)="makeTodoEditable($event)" (deleteTodo)="deleteTodoItem($event)"></app-todo-item>
+  </ng-container>
+
+</div>

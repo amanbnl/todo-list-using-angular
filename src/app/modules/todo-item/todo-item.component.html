@@ -1,0 +1,7 @@
+<div class="todo-item" [id]="todoItem.id" (click)="handleClick($event,todoItem)">
+  <p class="un-completed" [class.completed]="todoItem.isCompleted">{{todoItem.inputText}}</p>
+  <div>
+    <i class="fas fa-pen-to-square" (click)="handleEditClick(todoItem)"></i>
+    <i class="fa-solid fa-trash" (click)="handleDeleteClick(todoItem)"></i>
+  </div>
+</div>
